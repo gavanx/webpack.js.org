@@ -94,21 +94,7 @@ Navigation.propTypes = {
 function Navigation({ links, pathname, hash = '', toggleSidebar }) {
   const [locationHash, setLocationHash] = useState(hash);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    if (isClient) {
-      const DocSearch = require('docsearch.js');
-
-      DocSearch({
-        apiKey: 'cccb861b286b414d0f820013f3f70b84',
-        indexName: 'webpack_china',
-        inputSelector: '.navigation-search__input',
-      });
-    }
-  }, []);
-=======
   const location = useLocation();
->>>>>>> f810711f3d7839a6a7b2dd3f92b00d8ca80ad950
 
   useEffect(() => {
     setLocationHash(hash);
@@ -182,8 +168,8 @@ function Navigation({ links, pathname, hash = '', toggleSidebar }) {
           <div className="inline-flex items-center ml-[18px]">
             <HelloDarkness />
             <DocSearch
-              apiKey={'fac401d1a5f68bc41f01fb6261661490'}
-              indexName="webpack-js-org"
+              apiKey={'cccb861b286b414d0f820013f3f70b84'}
+              indexName="webpack_china"
               disableUserPersonalization={true}
               placeholder="Search webpack documentation"
               transformItems={(items) =>
