@@ -326,9 +326,7 @@ import.meta.webpackHot
 
 `info` 参数将是一个包含以下某些值的对象：
 
-<!-- eslint-skip -->
-
-```js
+```ts
 {
   type: 'self-declined' | 'declined' |
         'unaccepted' | 'accepted' |
@@ -363,7 +361,13 @@ import.meta.webpackHot.addStatusHandler((status) => {
 });
 ```
 
+<<<<<<< HEAD
 ### `removeStatusHandler` {#removestatushandler}
+=======
+Bear in mind that when the status handler returns a `Promise`, the HMR system will wait for the `Promise` to resolve before continuing.
+
+### `removeStatusHandler`
+>>>>>>> 3ce776ae326c5bc7c6865565fb8c5680e9f4454f
 
 移除一个注册的状态处理函数。
 
