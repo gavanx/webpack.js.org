@@ -10,7 +10,7 @@ translators:
 
 `Compiler` 使用 `NormalModuleFactory` 模块生成各类模块。从入口点开始，此模块会分解每个请求，解析文件内容以查找进一步的请求，然后通过分解所有请求以及解析新的文件来爬取全部文件。在最后阶段，每个依赖项都会成为一个模块实例。
 
-`NormalModuleFactory` 类扩展了 `Tapable` 并提供了以下的生命周期钩子。 
+`NormalModuleFactory` 类扩展了 `Tapable` 并提供了以下的生命周期钩子。
 你可以像使用编译器钩子一样使用它们：
 
 ```js
@@ -26,7 +26,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 与 `compiler` 一样，`tapAsync` 和 `tapPromise` 是否可用
 取决于钩子的类型。
 
-### beforeResolve {#beforeresolve}
+### beforeResolve {`#beforeresolve`}
 
 `AsyncSeriesBailHook`
 
@@ -34,7 +34,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`ResolveData`
 
-### factorize {#factorize}
+### factorize {`#factorize`}
 
 `AsyncSeriesBailHook`
 
@@ -42,7 +42,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`resolveData`
 
-### resolve {#resolve}
+### resolve {`#resolve`}
 
 `AsyncSeriesBailHook`
 
@@ -50,7 +50,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`resolveData`
 
-### resolveForScheme {#resolveForScheme}
+### resolveForScheme {`#resolveForScheme`}
 
 `AsyncSeriesBailHook`
 
@@ -58,7 +58,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`resolveData`
 
-### afterResolve {#afterResolve}
+### afterResolve {`#afterResolve`}
 
 `AsyncSeriesBailHook`
 
@@ -66,7 +66,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`resolveData`
 
-### createModule {#createModule}
+### createModule {`#createModule`}
 
 `AsyncSeriesBailHook`
 
@@ -74,7 +74,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`createData` `resolveData`
 
-### module {#module}
+### module {`#module`}
 
 `SyncWaterfallHook`
 
@@ -82,7 +82,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`module` `createData` `resolveData`
 
-### createParser {#createParser}
+### createParser {`#createParser`}
 
 `HookMap<SyncBailHook>`
 
@@ -92,7 +92,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`parserOptions`
 
-### parser {#parser}
+### parser {`#parser`}
 
 `HookMap<SyncHook>`
 
@@ -112,7 +112,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 6. `webassembly/async`
 7. `asset`
 
-### createGenerator {#createGenerator}
+### createGenerator {`#createGenerator`}
 
 `HookMap<SyncBailHook>`
 
@@ -122,7 +122,7 @@ NormalModuleFactory.hooks.someHook.for('identifier').tap(/* ... */);
 
 - 回调参数：`generatorOptions`
 
-### generator {#generator}
+### generator {`#generator`}
 
 `HookMap<SyncHook>`
 

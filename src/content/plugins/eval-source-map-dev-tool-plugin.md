@@ -24,7 +24,7 @@ related:
 new webpack.EvalSourceMapDevToolPlugin(options);
 ```
 
-## 选项 {#options}
+## 选项 {`#options`}
 
 支持以下选项：
 
@@ -39,13 +39,13 @@ new webpack.EvalSourceMapDevToolPlugin(options);
 
 T> 将 `module` 或者 `columns` 设置为 `false` 将产生较不精确的源映射，但会明显提高编译性能。
 
-T> 如果要在 [开发模式](/configuration/mode/#mode-development) 下对此插件使用自定义配置，请确保禁用默认配置。 即设置 `devtool: false`。 
+T> 如果要在 [开发模式](/configuration/mode/#mode-development) 下对此插件使用自定义配置，请确保禁用默认配置。 即设置 `devtool: false`。
 
-## 示例 {#examples}
+## 示例 {`#examples`}
 
 以下示例演示了此插件的一些常见用例。
 
-### 基本用例 {#basic-use-case}
+### 基本用例 {`#basic-use-case`}
 
 可以使用以下代码替换配置选项 `devtool: eval-source-map`，并使用等效的自定义插件配置：
 
@@ -57,7 +57,7 @@ module.exports = {
 };
 ```
 
-### 排除 Vendor(第三方库) Maps {#exclude-vendor-maps}
+### 排除 Vendor(第三方库) Maps {`#exclude-vendor-maps`}
 
 下面的代码将排除 `vendor.js` 包中任何模块 source map 的生成：
 

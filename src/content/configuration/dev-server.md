@@ -31,7 +31,7 @@ translators:
 
 T> 与 [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) 兼容的配置项后面 🔑 标记。
 
-## 开发服务器(`devServer`) {#devserver}
+## 开发服务器(`devServer`) {`#devserver`}
 
 `object`
 
@@ -74,7 +74,7 @@ T> 如果你需要要手动重新编译 `bundle`，将路由导航至 `/invalida
 
 T> 当启动本地服务的时候 HTML 模板是必须提供的，通常是 `index.html`。确保将脚本引用添加到 HTML 中，webpack-dev-server 不会自动注入它们。
 
-### Usage via CLI {#usage-via-cli}
+### Usage via CLI {`#usage-via-cli`}
 
 你可以通过 CLI 调用 webpack-dev-server，方式是：
 
@@ -84,7 +84,7 @@ npx webpack serve
 
 CLI 配置项列表可以在 [这里](https://github.com/webpack/webpack-cli/blob/master/SERVE-OPTIONS.md) 查询。
 
-## `devServer.after` {#devserverafter}
+## `devServer.after` {`#devserverafter`}
 
 `function (app, server, compiler)`
 
@@ -104,7 +104,7 @@ module.exports = {
 };
 ```
 
-## `devServer.allowedHosts` {#devserverallowedhosts}
+## `devServer.allowedHosts` {`#devserverallowedhosts`}
 
 `[string]`
 
@@ -148,7 +148,7 @@ module.exports = {
 npx webpack serve --entry ./entry/file --output-path ./output/path --allowed-hosts .host.com --allowed-hosts host2.com
 ```
 
-## `devServer.before` {#devserverbefore}
+## `devServer.before` {`#devserverbefore`}
 
 `function (app, server, compiler)`
 
@@ -171,7 +171,7 @@ module.exports = {
 };
 ```
 
-## `devServer.bonjour` {#devserverbonjour}
+## `devServer.bonjour` {`#devserverbonjour`}
 
 `boolean = false`
 
@@ -194,7 +194,7 @@ module.exports = {
 npx webpack serve --bonjour
 ```
 
-## `devServer.clientLogLevel` {#devserverclientloglevel}
+## `devServer.clientLogLevel` {`#devserverclientloglevel`}
 
 `string = 'info': 'silent' | 'trace' | 'debug' | 'info' | 'warn' | 'error' | 'none' | 'warning'`
 
@@ -221,7 +221,7 @@ module.exports = {
 npx webpack serve --client-log-level silent
 ```
 
-## `devServer.compress` {#devservercompress}
+## `devServer.compress` {`#devservercompress`}
 
 `boolean`
 
@@ -244,7 +244,7 @@ module.exports = {
 npx webpack serve --compress
 ```
 
-## `devServer.contentBase` {#devservercontentbase}
+## `devServer.contentBase` {`#devservercontentbase`}
 
 `boolean: false` `string` `[string]` `number`
 
@@ -291,7 +291,7 @@ module.exports = {
 npx webpack serve --content-base ./path/to/content/dir
 ```
 
-## `devServer.contentBasePublicPath` {#devservercontentbasepublicpath}
+## `devServer.contentBasePublicPath` {`#devservercontentbasepublicpath`}
 
 `string = '/'` `[string]`
 
@@ -325,7 +325,7 @@ module.exports = {
 };
 ```
 
-## `devServer.disableHostCheck` {#devserverdisablehostcheck}
+## `devServer.disableHostCheck` {`#devserverdisablehostcheck`}
 
 `boolean`
 
@@ -348,7 +348,7 @@ module.exports = {
 npx webpack serve --disable-host-check
 ```
 
-## `devServer.filename` 🔑 {#devserverfilename-}
+## `devServer.filename` 🔑 {`#devserverfilename-`}
 
 `string`
 
@@ -376,7 +376,7 @@ module.exports = {
 
 T> 当不使用 [lazy 模式](#devserverlazy-)时，`filename` 不会生效.
 
-## `devServer.headers` 🔑 {#devserverheaders-}
+## `devServer.headers` 🔑 {`#devserverheaders-`}
 
 `object`
 
@@ -395,7 +395,7 @@ module.exports = {
 };
 ```
 
-## `devServer.historyApiFallback` {#devserverhistoryapifallback}
+## `devServer.historyApiFallback` {`#devserverhistoryapifallback`}
 
 `boolean = false` `object`
 
@@ -454,7 +454,7 @@ npx webpack serve --history-api-fallback
 
 有关更多选项和信息，请参见 [connect-history-api-fallback](https://github.com/bripkens/connect-history-api-fallback) 文档。
 
-## `devServer.host` {#devserverhost}
+## `devServer.host` {`#devserverhost`}
 
 `string = 'localhost'`
 
@@ -477,7 +477,7 @@ module.exports = {
 npx webpack serve --host 0.0.0.0
 ```
 
-## `devServer.hot` {#devserverhot}
+## `devServer.hot` {`#devserverhot`}
 
 `boolean`
 
@@ -496,7 +496,7 @@ module.exports = {
 
 T> 请注意，要完全启用 HMR ，需要 [`webpack.HotModuleReplacementPlugin`](/plugins/hot-module-replacement-plugin/)。如果使用 --hot 选项启动 `webpack` 或 `webpack-dev-server`，该插件将自动添加，因此你可能不需要将其添加到 `webpack.config.js` 中。有关更多信息，请参见 [HMR 概览章节](/concepts/hot-module-replacement/)。
 
-## `devServer.hotOnly` {#devserverhotonly}
+## `devServer.hotOnly` {`#devserverhotonly`}
 
 `boolean`
 
@@ -519,7 +519,7 @@ module.exports = {
 npx webpack serve --hot-only
 ```
 
-## `devServer.http2` {#devserverhttp2}
+## `devServer.http2` {`#devserverhttp2`}
 
 `boolean = false`
 
@@ -570,7 +570,7 @@ npx webpack serve --http2
 npx webpack serve --http2 --key ./path/to/server.key --cert ./path/to/server.crt --cacert ./path/to/ca.pem
 ```
 
-## `devServer.https` {#devserverhttps}
+## `devServer.https` {`#devserverhttps`}
 
 `boolean` `object`
 
@@ -618,7 +618,7 @@ npx webpack serve --https
 npx webpack serve --https --key ./path/to/server.key --cert ./path/to/server.crt --cacert ./path/to/ca.pem
 ```
 
-## `devServer.index` {#devserverindex}
+## `devServer.index` {`#devserverindex`}
 
 `string`
 
@@ -635,7 +635,7 @@ module.exports = {
 };
 ```
 
-## `devServer.injectClient` {#devserverinjectclient}
+## `devServer.injectClient` {`#devserverinjectclient`}
 
 `boolean = false` `function (compilerConfig) => boolean`
 
@@ -650,7 +650,7 @@ module.exports = {
 };
 ```
 
-## `devServer.injectHot` {#devserverinjecthot}
+## `devServer.injectHot` {`#devserverinjecthot`}
 
 `boolean = false` `function (compilerConfig) => boolean`
 
@@ -668,7 +668,7 @@ module.exports = {
 
 W> 使用前请确保 [`devServer.hot`](#devserverhot) 的值设置为 `true`，因为 `devServer.injectHot` 仅适用于 HMR。
 
-## `devServer.inline` {#devserverinline}
+## `devServer.inline` {`#devserverinline`}
 
 `boolean`
 
@@ -697,7 +697,7 @@ npx webpack serve --inline
 
 T> 对于 [Hot Module Replacement](/plugins/hot-module-replacement-plugin/) ，建议使用串联模式，因为它包含来自 websocket 的 HMR 触发器。 轮询模式可以用作替代方法，但需要附加的入口点`'webpack/hot/poll?1000'`。
 
-## `devServer.lazy` 🔑 {#devserverlazy-}
+## `devServer.lazy` 🔑 {`#devserverlazy-`}
 
 `boolean`
 
@@ -724,7 +724,7 @@ T> [`watchOptions`](#devserverwatchoptions-) 不会有任何副作用当使用 *
 
 T> 如果是通过命令行使用, 请确保 **inline mode** 处于禁用状态。
 
-## `devServer.liveReload` {#devserverlivereload}
+## `devServer.liveReload` {`#devserverlivereload`}
 
 `boolean = true`
 
@@ -751,7 +751,7 @@ npx webpack serve --liveReload
 
 W> 热更新只适用于 web 相关的 [targets](/configuration/target/#string)，例如：`web`、`webworker`、`electron-renderer` 和 `node-webkit`。
 
-## `devServer.mimeTypes` 🔑 {#devservermimetypes}
+## `devServer.mimeTypes` 🔑 {`#devservermimetypes`}
 
 `object`
 
@@ -770,7 +770,7 @@ module.exports = {
 };
 ```
 
-## `devServer.noInfo` 🔑 {#devservernoinfo-}
+## `devServer.noInfo` 🔑 {`#devservernoinfo-`}
 
 `boolean = false`
 
@@ -787,7 +787,7 @@ module.exports = {
 };
 ```
 
-## `devServer.onListening` {#devserveronlistening}
+## `devServer.onListening` {`#devserveronlistening`}
 
 `function (server)`
 
@@ -807,7 +807,7 @@ module.exports = {
 };
 ```
 
-## `devServer.open` {#devserveropen}
+## `devServer.open` {`#devserveropen`}
 
 `boolean = false` `string` `object`
 
@@ -860,7 +860,7 @@ npx webpack serve --open 'Google Chrome'
 
 T> 浏览器应用程序名称取决于平台。 不要在可重用模块中对其进行硬编码。 例如，`'Chrome'` 在 macOS 上是 `'Google Chrome'` ，在 Linux 上是 `'Google Chrome'` 在 Windows 上是 `'Chrome'` 。
 
-## `devServer.openPage` {#devserveropenpage}
+## `devServer.openPage` {`#devserveropenpage`}
 
 `string` `[string]`
 
@@ -906,7 +906,7 @@ module.exports = {
 npx webpack serve --open --open-page different/page1 --open-page different/page2
 ```
 
-## `devServer.overlay` {#devserveroverlay}
+## `devServer.overlay` {`#devserveroverlay`}
 
 `boolean = false` `object: { errors boolean = false, warnings boolean = false }`
 
@@ -939,7 +939,7 @@ module.exports = {
 };
 ```
 
-## `devServer.pfx` {#devserverpfx}
+## `devServer.pfx` {`#devserverpfx`}
 
 `string`
 
@@ -962,7 +962,7 @@ module.exports = {
 npx webpack serve --pfx ./path/to/file.pfx
 ```
 
-## `devServer.pfxPassphrase` {#devserverpfxpassphrase}
+## `devServer.pfxPassphrase` {`#devserverpfxpassphrase`}
 
 `string`
 
@@ -985,7 +985,7 @@ module.exports = {
 npx webpack serve --pfx-passphrase passphrase
 ```
 
-## `devServer.port` {#devserverport}
+## `devServer.port` {`#devserverport`}
 
 `number`
 
@@ -1008,7 +1008,7 @@ module.exports = {
 npx webpack serve --port 8080
 ```
 
-## `devServer.proxy` {#devserverproxy}
+## `devServer.proxy` {`#devserverproxy`}
 
 `object` `[object, function]`
 
@@ -1155,7 +1155,7 @@ module.exports = {
 };
 ```
 
-## `devServer.progress` - CLI only {#devserverprogress---cli-only}
+## `devServer.progress` - CLI only {`#devserverprogress---cli-only`}
 
 `boolean`
 
@@ -1165,7 +1165,7 @@ module.exports = {
 npx webpack serve --progress
 ```
 
-## `devServer.public` {#devserverpublic}
+## `devServer.public` {`#devserverpublic`}
 
 `string`
 
@@ -1190,7 +1190,7 @@ module.exports = {
 npx webpack serve --public myapp.test:80
 ```
 
-## `devServer.publicPath` 🔑 {#devserverpublicpath-}
+## `devServer.publicPath` 🔑 {`#devserverpublicpath-`}
 
 `string = '/'`
 
@@ -1232,7 +1232,7 @@ module.exports = {
 
 T> 建议 `devServer.publicPath` 与 [`output.publicPath`](/configuration/output/#outputpublicpath) 相同。
 
-## `devServer.quiet` 🔑 {#devserverquiet-}
+## `devServer.quiet` 🔑 {`#devserverquiet-`}
 
 `boolean`
 
@@ -1255,7 +1255,7 @@ module.exports = {
 npx webpack serve --quiet
 ```
 
-## `devServer.serveIndex` {#devserverserveindex}
+## `devServer.serveIndex` {`#devserverserveindex`}
 
 `boolean = true`
 
@@ -1278,7 +1278,7 @@ module.exports = {
 npx webpack serve --serveIndex
 ```
 
-## `devServer.setup` {#devserversetup}
+## `devServer.setup` {`#devserversetup`}
 
 `function (app, server)`
 
@@ -1302,7 +1302,7 @@ module.exports = {
 };
 ```
 
-## `devServer.sockHost` {#devserversockhost}
+## `devServer.sockHost` {`#devserversockhost`}
 
 `string`
 
@@ -1319,7 +1319,7 @@ module.exports = {
 };
 ```
 
-## `devServer.sockPath` {#devserversockpath}
+## `devServer.sockPath` {`#devserversockpath`}
 
 `string = '/sockjs-node'`
 
@@ -1342,7 +1342,7 @@ module.exports = {
 npx webpack serve --sock-path /socket
 ```
 
-## `devServer.sockPort` {#devserversockport}
+## `devServer.sockPort` {`#devserversockport`}
 
 `number` `string`
 
@@ -1359,7 +1359,7 @@ module.exports = {
 };
 ```
 
-## `devServer.staticOptions` {#devserverstaticoptions}
+## `devServer.staticOptions` {`#devserverstaticoptions`}
 
 `object`
 
@@ -1380,7 +1380,7 @@ module.exports = {
 
 T> 这仅在将 [`devServer.contentBase`](#devservercontentbase) 用作字符串时有效。
 
-## `devServer.stats` 🔑 {#devserverstats-}
+## `devServer.stats` 🔑 {`#devserverstats-`}
 
 `string: 'none' | 'errors-only' | 'minimal' | 'normal' | 'verbose'` `object`
 
@@ -1403,7 +1403,7 @@ module.exports = {
 
 T> 与 `quiet` 或 `noInfo` 一起使用时，该选项无效。
 
-## `devServer.stdin` - CLI only {#devserverstdin---cli-only}
+## `devServer.stdin` - CLI only {`#devserverstdin---cli-only`}
 
 `boolean`
 
@@ -1413,7 +1413,7 @@ T> 与 `quiet` 或 `noInfo` 一起使用时，该选项无效。
 npx webpack serve --stdin
 ```
 
-## `devServer.transportMode` {#devservertransportmode}
+## `devServer.transportMode` {`#devservertransportmode`}
 
 `string = 'sockjs': 'sockjs' | 'ws'` `object`
 
@@ -1440,7 +1440,7 @@ module.exports = {
 
 T> 提供自定义客户端和服务器实现时，请确保它们彼此兼容，以成功进行通信。
 
-### `devServer.transportMode.client` {#devservertransportmodeclient}
+### `devServer.transportMode.client` {`#devservertransportmodeclient`}
 
 `string` `path`
 
@@ -1460,7 +1460,7 @@ module.exports = {
 };
 ```
 
-### `devServer.transportMode.server` {#devservertransportmodeserver}
+### `devServer.transportMode.server` {`#devservertransportmodeserver`}
 
 `string` `path` `function`
 
@@ -1508,7 +1508,7 @@ module.exports = {
 };
 ```
 
-## `devServer.useLocalIp` {#devserveruselocalip}
+## `devServer.useLocalIp` {`#devserveruselocalip`}
 
 `boolean`
 
@@ -1531,7 +1531,7 @@ module.exports = {
 npx webpack serve --useLocalIp
 ```
 
-## `devServer.watchContentBase` {#devserverwatchcontentbase}
+## `devServer.watchContentBase` {`#devserverwatchcontentbase`}
 
 `boolean`
 
@@ -1554,7 +1554,7 @@ module.exports = {
 npx webpack serve --watch-content-base
 ```
 
-## `devServer.watchOptions` 🔑 {#devserverwatchoptions-}
+## `devServer.watchOptions` 🔑 {`#devserverwatchoptions-`}
 
 `object`
 
@@ -1579,7 +1579,7 @@ module.exports = {
 
 查阅 [WatchOptions](/configuration/watch/) 了解更多。
 
-## `devServer.writeToDisk` 🔑 {#devserverwritetodisk-}
+## `devServer.writeToDisk` 🔑 {`#devserverwritetodisk-`}
 
 `boolean = false` `function (filePath) => boolean`
 
